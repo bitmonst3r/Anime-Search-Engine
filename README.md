@@ -4,4 +4,4 @@ Link: https://Anime-Search-Engine.debbiem.repl.co
 
 ## View
 
-![Site-Screenshot](imges/anime-search-engine.JPG)
+![Site-Screenshot](images/anime-search-engine.JPG)
