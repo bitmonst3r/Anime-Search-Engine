@@ -20,7 +20,7 @@ async function findAnime() {
 
   for (let i=0; i<info.length; i++) {
     $('#holder').append(`<div class="card">
-          <img src="${info[i].image_url}" class="card-img-top">
+          <img src="${info[i].image.image_url}" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title"> ${info[i].title}</h5>
             <p class="card-text">${info[i].synopsis}</p>
