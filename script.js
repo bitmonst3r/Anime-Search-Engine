@@ -16,15 +16,15 @@ async function findAnime() {
   console.log(animeName);
   const url = `https://api.jikan.moe/v4/anime?q=${animeName}`;
   const data = await fetchData(url);
-  const info = await data.results;
+  const info = await data.data;
 
-  for (let i=0; i<data.length; i++) {
+  for (let i=0; i<info.length; i++) {
     $('#holder').append(`<div class="card">
-          <img src="${data[i].images.jpg.image_url}" class="card-img-top">
+          <img src="${info[i].images.jpg.image_url}" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title"> ${data[i].title}</h5>
-            <p class="card-text">${data[i].synopsis}</p>
-            <a href="${data[i].url}" class="btn btn-outline-primary">More Info</a>
+            <h5 class="card-title"> ${info[i].title}</h5>
+            <p class="card-text">${info[i].synopsis}</p>
+            <a href="${info[i].url}" class="btn btn-outline-primary">More Info</a>
           </div>
         </div>`);
   }
