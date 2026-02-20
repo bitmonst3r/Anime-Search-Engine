@@ -14,7 +14,7 @@ input.addEventListener("keyup", function(event) {
 async function findAnime() {
   const animeName = $('#input').val();
   console.log(animeName);
-  const url = `https://api.jikan.moe/v3/search/anime?q=${animeName}`;
+  const url = `https://api.jikan.moe/v4/anime?q=${animeName}`;
   const data = await fetchData(url);
   const info = await data.results;
 
