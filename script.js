@@ -18,13 +18,13 @@ async function findAnime() {
   const data = await fetchData(url);
   const info = await data.results;
 
-  for (let i=0; i<info.length; i++) {
+  for (let i=0; i<data.length; i++) {
     $('#holder').append(`<div class="card">
-          <img src="${info[i].image.image_url}" class="card-img-top">
+          <img src="${data[i].images.jpg.image_url}" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title"> ${info[i].title}</h5>
-            <p class="card-text">${info[i].synopsis}</p>
-            <a href="${info[i].url}" class="btn btn-outline-primary">More Info</a>
+            <h5 class="card-title"> ${data[i].title}</h5>
+            <p class="card-text">${data[i].synopsis}</p>
+            <a href="${data[i].url}" class="btn btn-outline-primary">More Info</a>
           </div>
         </div>`);
   }
